@@ -1,7 +1,7 @@
 ## Desafio: Upload de imagens
 
-<div style="margin: 2rem; text-align: center">
-<img src="screens/logo.svg" alt="logo do upfi" />
+<div style="width: 100%; padding: 2rem; text-align:center;">
+<img style="margin: 2rem 0; margin: 0 auto" src="screens/logo.svg" alt="logo do upfi" width="300px" />
 </div>
 
 <p>
