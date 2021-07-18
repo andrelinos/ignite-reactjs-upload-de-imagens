@@ -1,11 +1,18 @@
 ## Desafio: Upload de imagens
 
-<div style="width: 100%; padding: 2rem; text-align:center;">
-<img style="margin: 2rem 0; margin: 0 auto" src="screens/logo.svg" alt="logo do upfi" width="300px" />
+  <br>
+
+<div align="center">
+
+<img src="screens/logo.svg" alt="logo do upfi" width="300px" />
 </div>
 
+  <br>
+
+<br />
+
 <p>
-<strong>Notes:</strong> Nesse desafio, iremos realizar o upload e listagem de imagens utilizando React Query, React Hook Form e Chakra UI.
+<strong>Nota:</strong> Nesse desafio, iremos realizar o upload e listagem de imagens utilizando React Query, React Hook Form e Chakra UI.
 </p>
 <br />
 
