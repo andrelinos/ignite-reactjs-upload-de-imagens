@@ -160,15 +160,15 @@ const FileInputBase: ForwardRefRenderFunction<
             justifyContent="center"
             alignItems="center"
             borderRadius="md"
-            bgColor="pGray.800"
-            color="pGray.200"
+            bgColor="gray.800"
+            color="gray.200"
             borderWidth={error?.message && 2}
             borderColor={error?.message && 'red.500'}
           >
             {isSending ? (
               <>
                 <CircularProgress
-                  trackColor="pGray.200"
+                  trackColor="gray.200"
                   value={progress}
                   color="orange.500"
                 >
