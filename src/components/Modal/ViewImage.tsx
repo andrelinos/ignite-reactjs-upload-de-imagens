@@ -51,7 +51,6 @@ export function ModalViewImage({
             fontSize="1rem"
             mr="auto"
             alt="Abrir imagem em nova aba"
-            outlineColor="gray.100"
           >
             Abrir original
             <ExternalLinkIcon mx="5px" />

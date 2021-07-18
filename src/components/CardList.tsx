@@ -1,4 +1,4 @@
-import { SimpleGrid, useDisclosure } from '@chakra-ui/react';
+import { SimpleGrid, Text, Flex, useDisclosure } from '@chakra-ui/react';
 import { useState } from 'react';
 import { Card } from './Card';
 import { ModalViewImage } from './Modal/ViewImage';
@@ -27,11 +27,19 @@ export function CardList({ cards }: CardsProps): JSX.Element {
 
   return (
     <>
-      <SimpleGrid columns={[1, 2, 2, 3]} spacing="40px">
-        {cards.map(card => (
-          <Card key={card.id} data={card} viewImage={handleViewImage} />
-        ))}
-      </SimpleGrid>
+      {cards.length > 0 ? (
+        <SimpleGrid columns={[1, 2, 2, 3]} spacing="40px">
+          {cards.map(card => (
+            <Card key={card.id} data={card} viewImage={handleViewImage} />
+          ))}
+        </SimpleGrid>
+      ) : (
+        <Flex justify="center">
+          <Text fontSize={20} color="yellow.100">
+            Adicione uma imagem...
+          </Text>
+        </Flex>
+      )}
 
       <ModalViewImage
         isOpen={isOpen}
