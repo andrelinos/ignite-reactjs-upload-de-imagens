@@ -1,4 +1,4 @@
-import { Button, Box } from '@chakra-ui/react';
+import { Button, Box, Flex } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useInfiniteQuery } from 'react-query';
 
@@ -23,7 +23,7 @@ interface GetImagesResponse {
 
 export default function Home(): JSX.Element {
   async function fetchImages({ pageParam = null }): Promise<GetImagesResponse> {
-    const { data } = await api.get('/api/images', {
+    const { data } = await api('/api/images', {
       params: {
         after: pageParam,
       },
@@ -51,25 +51,40 @@ export default function Home(): JSX.Element {
   }, [data]);
 
   if (isLoading && !isError) {
-    <Loading />;
+    return <Loading />;
   }
 
   if (!isLoading && isError) {
-    <Error />;
+    return <Error />;
   }
 
   return (
     <>
       <Header />
 
-      <Box maxW={1120} px={[10, 15, 20]} mx="auto" my={[10, 15, 20]}>
-        <CardList cards={formattedData} />
+      <Flex
+        flexDir="column"
+        maxW={1120}
+        px={[10, 15, 20]}
+        mx="auto"
+        my={[10, 15, 20]}
+      >
+        <Box>
+          <CardList cards={formattedData} />
+        </Box>
         {hasNextPage && (
-          <Button onClick={() => fetchNextPage()} disabled={isFetchingNextPage}>
+          <Button
+            w="100%"
+            maxW="50rem"
+            mx="auto"
+            mt="2rem"
+            onClick={() => fetchNextPage()}
+            disabled={isFetchingNextPage}
+          >
             {isFetchingNextPage ? 'Carregando...' : 'Carregar mais'}
           </Button>
         )}
-      </Box>
+      </Flex>
     </>
   );
 }
