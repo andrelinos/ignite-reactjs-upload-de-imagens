@@ -1,0 +1,24 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Works on Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #dd6b20 transparent;
+}
+
+/* Works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #dd6b20;
+  border-radius: 40px;
+  border: 5px solid transparent;
+}
