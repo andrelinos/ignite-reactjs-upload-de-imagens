@@ -1,3 +1,4 @@
+/* eslint-disable react/function-component-definition */
 import { forwardRef, ForwardRefRenderFunction } from 'react';
 import { FieldError } from 'react-hook-form';
 import {
