@@ -1,4 +1,3 @@
-import ReactLink from 'next/link';
 import {
   Modal,
   ModalOverlay,
@@ -50,7 +49,6 @@ export function ModalViewImage({
             isExternal
             fontSize="1rem"
             mr="auto"
-            alt="Abrir imagem em nova aba"
           >
             Abrir original
             <ExternalLinkIcon mx="5px" />

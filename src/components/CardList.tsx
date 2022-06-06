@@ -30,6 +30,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
       {cards.length > 0 ? (
         <SimpleGrid columns={[1, 2, 2, 3]} spacing="40px">
           {cards.map(card => (
+            // eslint-disable-next-line react/jsx-no-bind
             <Card key={card.id} data={card} viewImage={handleViewImage} />
           ))}
         </SimpleGrid>
